@@ -24,7 +24,7 @@ Route::get('/', function () {
     ];
 
     return view('Home', $data);
-})->name('Home')  ;
+})  ;
 
 Route::get('/Team', function () {
 
