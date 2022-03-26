@@ -16,9 +16,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $data = [
+        'title' => "Hello World!",
+        'paragraph' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati exercitationem inventore perferendis! Cum deserunt corporis excepturi! Laboriosam, laudantium pariatur. Veritatis eaque vero distinctio pariatur molestiae illum impedit quidem officiis.",
         'name' => 'Matteo',
-        'lastname' => 'Morganti'
+        'lastname' => 'Morganti',
+        'links' => ['Home', 'Team', 'Progetti']
     ];
 
     return view('home', $data);
+});
+
+Route::get('/team', function () {
+
+    $data = [
+        'name' => ['Matteo', 'Mario', 'Elisa'],
+        'lastname' => ['Morganti', 'Rossi', "Verdi"],
+        'paragraph' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati exercitationem inventore perferendis! Cum deserunt corporis excepturi! Laboriosam, laudantium pariatur. Veritatis eaque vero distinctio pariatur molestiae illum impedit quidem officiis.",
+        'links' => ['Home', 'Team', 'Progetti']
+    ];
+
+    return view('team', $data);
 });
