@@ -23,10 +23,10 @@ Route::get('/', function () {
         'links' => ['Home', 'Team', 'Progetti']
     ];
 
-    return view('home', $data);
-});
+    return view('Home', $data);
+})->name('Home')  ;
 
-Route::get('/team', function () {
+Route::get('/Team', function () {
 
     $data = [
         'name' => ['Matteo', 'Mario', 'Elisa'],
@@ -35,5 +35,5 @@ Route::get('/team', function () {
         'links' => ['Home', 'Team', 'Progetti']
     ];
 
-    return view('team', $data);
+    return view('Team', $data);
 });

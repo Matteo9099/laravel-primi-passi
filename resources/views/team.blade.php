@@ -26,18 +26,13 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav m-auto">
-                        <li class="nav-item me-4">
-                            <a class="nav-link active" href="#">Home</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link active" href="#">Profilo</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link active" href="#">Progetti</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link active" href="#">Contatti</a>
-                        </li>
+                    <ul class="navbar-nav m-auto">
+                        @foreach ($links as $link)
+                            <li class="nav-item me-4">
+                                <a class="nav-link active" href="{{ $link }}">{{ $link }}</a>
+                            </li>
+                        @endforeach
+                    </ul>
                     </ul>
                 </div>
             </div>

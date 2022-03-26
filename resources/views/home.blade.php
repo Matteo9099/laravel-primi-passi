@@ -28,7 +28,7 @@
                     <ul class="navbar-nav m-auto">
                         @foreach ($links as $link)
                             <li class="nav-item me-4">
-                                <a class="nav-link active" href="#">{{ $link }}</a>
+                                <a class="nav-link active" href="{{ $link }}">{{ $link }}</a>
                             </li>
                         @endforeach
                     </ul>
